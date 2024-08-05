@@ -1,0 +1,24 @@
+<div>
+    <label>Filter by Title: <input type="text" [(ngModel)]="filter"></label>
+    <button (click)="onFilter()">Filter</button>
+</div>
+
+
+
+
+<table class="table" styles="width:200px">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts">
+            <th scope="row">#</th>
+            <td>{{post.title}}</td>
+            <td>{{post.content}}</td>
+        </tr>
+    </tbody>
+  </table>
